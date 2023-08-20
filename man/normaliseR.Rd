@@ -3,6 +3,7 @@
 \docType{package}
 \name{normaliseR}
 \alias{normaliseR}
+\alias{normaliseR-package}
 \title{Rescale Vectors and Time-Series Features}
 \description{
 Rescale Vectors and Time-Series Features
