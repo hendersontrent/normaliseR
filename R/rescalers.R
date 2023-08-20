@@ -66,3 +66,19 @@ robustsigmoid_scaler <- function(x){
   x_new <- 1 / (1 + exp(-((x1 - stats::median(x1, na.rm = TRUE)) / (stats::IQR(x1, na.rm = TRUE) / 1.35))))
   return(x_new)
 }
+
+#' Rescales a numeric vector using maximum absolute scaling
+#'
+#' \eqn{z_{i} = \frac{x_{i}}{\text{max}(\mathbf{x})}}
+#'
+#' @param x \code{numeric} vector
+#' @return \code{numeric} vector
+#' @author Trent Henderson
+#' @export
+#'
+
+maxabs_scaler <- function(x){
+  x1 <- as.vector(x) # Catches class "ts" cases
+  x_new <- x1 / max(x1, na.rm = TRUE)
+  return(x_new)
+}

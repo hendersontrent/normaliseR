@@ -101,7 +101,7 @@ appropriately, learn appropriate weight values, or minimise a loss
 function. <code>normaliseR</code> includes function
 <code>normalise</code> (or <code>normalize</code>) to rescale either a
 whole <code>feature_calculations</code> object, or a single vector of
-values. Four normalisation methods are currently offered:</p>
+values. The following normalisation methods are currently offered:</p>
 <ul>
 <li>z-score—<code>"zScore"</code>
 </li>
@@ -112,6 +112,8 @@ original <a href="https://github.com/benfulcher/hctsa" class="external-link">MAT
 version</a>) – <code>"RobustSigmoid"</code>
 </li>
 <li>Min-max—<code>"MinMax"</code>
+</li>
+<li>Maximum absolute—<code>"MaxAbs"</code>
 </li>
 </ul>
 <p><code>normalise</code> takes only three arguments:</p>

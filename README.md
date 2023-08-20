@@ -27,7 +27,7 @@ can adversely impact the model’s capacity to fit the data appropriately,
 learn appropriate weight values, or minimise a loss function.
 `normaliseR` includes function `normalise` (or `normalize`) to rescale
 either a whole `feature_calculations` object, or a single vector of
-values. Four normalisation methods are currently offered:
+values. The following normalisation methods are currently offered:
 
 - z-score—`"zScore"`
 - Sigmoid—`"Sigmoid"`
@@ -35,3 +35,4 @@ values. Four normalisation methods are currently offered:
   original [MATLAB version](https://github.com/benfulcher/hctsa)) –
   `"RobustSigmoid"`
 - Min-max—`"MinMax"`
+- Maximum absolute—`"MaxAbs"`
