@@ -86,7 +86,7 @@
 <h2 id="general-purpose">General purpose<a class="anchor" aria-label="anchor" href="#general-purpose"></a>
 </h2>
 <p><code>normaliseR</code> is a software package for R for rescaling numerical vectors or <code>feature_calculations</code> objects produced by the <a href="https://github.com/hendersontrent/purloiner" class="external-link"><code>purloiner</code></a> package. It was specifically designed to be the rescaling module of the broader feature-based time-series ‘mothership’ package <a href="https://github.com/hendersontrent/theft" class="external-link"><code>theft</code></a>.</p>
-<p>Putting calculated feature vectors on an equal scale is crucial for any statistical or machine learning model as variables with high variance can adversely impact the model’s capacity to fit the data appropriately, learn appropriate weight values, or minimise a loss function. <code>normaliseR</code> includes function <code>normalise</code> (or <code>normalize</code>) to rescale either a whole <code>feature_calculations</code> object, or a single vector of values. Four normalisation methods are currently offered:</p>
+<p>Putting calculated feature vectors on an equal scale is crucial for any statistical or machine learning model as variables with high variance can adversely impact the model’s capacity to fit the data appropriately, learn appropriate weight values, or minimise a loss function. <code>normaliseR</code> includes function <code>normalise</code> (or <code>normalize</code>) to rescale either a whole <code>feature_calculations</code> object, or a single vector of values. The following normalisation methods are currently offered:</p>
 <ul>
 <li>z-score—<code>"zScore"</code>
 </li>
@@ -95,6 +95,8 @@
 <li>Outlier-robust Sigmoid (credit to Ben Fulcher for creating the original <a href="https://github.com/benfulcher/hctsa" class="external-link">MATLAB version</a>) – <code>"RobustSigmoid"</code>
 </li>
 <li>Min-max—<code>"MinMax"</code>
+</li>
+<li>Maximum absolute—<code>"MaxAbs"</code>
 </li>
 </ul>
 </div>

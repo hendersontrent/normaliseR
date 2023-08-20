@@ -16,3 +16,7 @@ test_that("Sigmoid works", {
 test_that("RobustSigmoid works", {
   expect_equal(length(normalise(x, norm_method = "RobustSigmoid")), length(x))
 })
+
+test_that("MaxAbs works", {
+  expect_equal(length(normalise(x, norm_method = "MaxAbs")), length(x))
+})
