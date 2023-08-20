@@ -1,5 +1,6 @@
 #'
 #' @docType package
+#' @aliases normaliseR-package
 #' @name normaliseR
 #' @title Rescale Vectors and Time-Series Features
 #'
