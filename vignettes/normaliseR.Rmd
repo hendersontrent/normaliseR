@@ -1,0 +1,58 @@
+---
+title: "Introduction to normaliseR"
+author: "Trent Henderson"
+date: "`r Sys.Date()`"
+output:
+  rmarkdown::html_vignette:
+    toc: true
+    toc_depth: 4
+vignette: >
+  %\VignetteIndexEntry{Introduction to normaliseR}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.height = 7,
+  fig.width = 7,
+  warning = FALSE,
+  fig.align = "center"
+)
+```
+
+```{r setup, message = FALSE, warning = FALSE}
+library(normaliseR)
+```
+
+## Purpose
+
+`normaliseR` is a software package for R for rescaling numerical vectors or `feature_calculations` objects produced by the [`purloiner`](https://github.com/hendersontrent/purloiner) package. It was specifically designed to be the rescaling module of the broader feature-based time-series 'mothership' package [`theft`](https://github.com/hendersontrent/theft).
+
+Putting calculated feature vectors on an equal scale is crucial for any statistical or machine learning model as variables with high variance can adversely impact the model's capacity to fit the data appropriately, learn appropriate weight values, or minimise a loss function. `normaliseR` includes function `normalise` (or `normalize`) to rescale either a whole `feature_calculations` object, or a single vector of values. Four normalisation methods are currently offered:
+
+* z-score---`"zScore"`
+* Sigmoid---`"Sigmoid"`
+* Outlier-robust Sigmoid (credit to Ben Fulcher for creating the original [MATLAB version](https://github.com/benfulcher/hctsa)) -- `"RobustSigmoid"`
+* Min-max---`"MinMax"`
+
+`normalise` takes only three arguments:
+
+1. `data`---either a `feature_calculations` object containing the raw feature matrix produced by `purloiner::extract_features` or `theft::calculate_features` or a numeric vector containing the values to be rescaled
+2. `norm_method`---character denoting the rescaling/normalising method to apply. Can be one of `"zScore"`, `"Sigmoid"`, `"RobustSigmoid"`, or `"MinMax"`. Defaults to `"zScore"`
+3. `unit_int`---Boolean whether to rescale into unit interval $[0,1]$ after applying normalisation method. Defaults to `FALSE`
+
+Here is a simple example on a vector:
+
+```{r, message = FALSE, warning = FALSE}
+x <- rnorm(100)
+normed <- normalise(x, norm_method = "zScore", unit_int = FALSE)
+```
+
+You can also access each individual rescaling function independently, though this affords you less overall control:
+
+```{r, message = FALSE, warning = FALSE}
+rs <- robustsigmoid_scaler(x)
+```
