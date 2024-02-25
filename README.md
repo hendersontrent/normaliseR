@@ -16,10 +16,8 @@ devtools::install_github("hendersontrent/normaliseR")
 
 `normaliseR` is a software package for R for rescaling numerical vectors
 or `feature_calculations` objects produced by the
-[`purloiner`](https://github.com/hendersontrent/purloiner) package. It
-was specifically designed to be the rescaling module of the broader
-feature-based time-series ‘mothership’ package
-[`theft`](https://github.com/hendersontrent/theft).
+[`theft`](https://github.com/hendersontrent/theft) R package for
+computing time-series features.
 
 Putting calculated feature vectors on an equal scale is crucial for any
 statistical or machine learning model as variables with high variance
