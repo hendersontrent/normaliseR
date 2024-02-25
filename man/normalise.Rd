@@ -18,14 +18,14 @@ normalize(
 )
 }
 \arguments{
-\item{data}{either a \code{feature_calculations} object containing the raw feature matrix produced by \code{calculate_features} or a \code{vector} of class \code{numeric} containing values to be rescaled}
+\item{data}{either a \code{feature_calculations} object containing the raw feature matrix produced by \code{theft::calculate_features} or a \code{vector} of class \code{numeric} containing values to be rescaled}
 
 \item{norm_method}{\code{character} denoting the rescaling/normalising method to apply. Can be one of \code{"zScore"}, \code{"Sigmoid"}, \code{"RobustSigmoid"}, \code{"MinMax"}, or \code{"MaxAbs"}. Defaults to \code{"zScore"}}
 
 \item{unit_int}{\code{Boolean} whether to rescale into unit interval \code{[0,1]} after applying normalisation method. Defaults to \code{FALSE}}
 }
 \value{
-either an object of class \code{data.frame} or a \code{numeric} vector
+either an object of class \code{feature_calculations} object or a \code{numeric} vector depending on the data type supplied to \code{data}
 }
 \description{
 `normalise()` and `normalize()` are synonyms.

@@ -5,10 +5,10 @@
 #' @importFrom rlang .data
 #' @importFrom scales rescale
 #' @importFrom dplyr %>% group_by mutate ungroup
-#' @param data either a \code{feature_calculations} object containing the raw feature matrix produced by \code{calculate_features} or a \code{vector} of class \code{numeric} containing values to be rescaled
+#' @param data either a \code{feature_calculations} object containing the raw feature matrix produced by \code{theft::calculate_features} or a \code{vector} of class \code{numeric} containing values to be rescaled
 #' @param norm_method \code{character} denoting the rescaling/normalising method to apply. Can be one of \code{"zScore"}, \code{"Sigmoid"}, \code{"RobustSigmoid"}, \code{"MinMax"}, or \code{"MaxAbs"}. Defaults to \code{"zScore"}
 #' @param unit_int \code{Boolean} whether to rescale into unit interval \code{[0,1]} after applying normalisation method. Defaults to \code{FALSE}
-#' @return either an object of class \code{data.frame} or a \code{numeric} vector
+#' @return either an object of class \code{feature_calculations} object or a \code{numeric} vector depending on the data type supplied to \code{data}
 #' @author Trent Henderson
 #' @export
 #'
@@ -23,7 +23,7 @@ normalise <- function(data, norm_method = c("zScore", "Sigmoid", "RobustSigmoid"
 
   if(inherits(data, "feature_calculations")){
 
-    normed <- data[[1]] %>%
+    normed <- data %>%
       dplyr::group_by(.data$names)
 
     if(norm_method == "zScore"){
