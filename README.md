@@ -1,9 +1,20 @@
 
 # normaliseR <img src="man/figures/logo.png" align="right" width="120" />
 
-Rescale Vectors and Time-Series Features
+[![CRAN
+version](https://www.r-pkg.org/badges/version/normaliseR)](https://www.r-pkg.org/pkg/normaliseR)
+[![CRAN RStudio mirror
+downloads](https://cranlogs.r-pkg.org/badges/normaliseR)](https://www.r-pkg.org/pkg/normaliseR)
+
+Re-Scale Vectors and Time-Series Features
 
 ## Installation
+
+You can install the stable version of `normaliseR` from CRAN:
+
+``` r
+install.packages("normaliseR")
+```
 
 You can install the development version of `normaliseR` from GitHub
 using the following:

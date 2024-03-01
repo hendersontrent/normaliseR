@@ -1,18 +1,17 @@
 Package: normaliseR
 Type: Package
-Title: Rescale Vectors and Time-Series Features
+Title: Re-Scale Vectors and Time-Series Features
 Version: 0.1.2
 Date: 2024-02-28
 Authors@R: c(
   person("Trent", "Henderson", email = "then6675@uni.sydney.edu.au", role = c("cre", "aut"))
   )
 Maintainer: Trent Henderson <then6675@uni.sydney.edu.au>
-Description: Provides standardized access to a range of rescaling methods for numerical vectors
+Description: Provides standardized access to a range of re-scaling methods for numerical vectors
     and time-series features calculated within the 'theft' ecosystem.
 BugReports: https://github.com/hendersontrent/normaliseR/issues
 License: MIT + file LICENSE
 Encoding: UTF-8
-LazyData: true
 Depends: 
     R (>= 3.5.0)
 Imports: 

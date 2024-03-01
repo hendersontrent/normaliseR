@@ -4,7 +4,7 @@
 \name{normaliseR}
 \alias{normaliseR}
 \alias{normaliseR-package}
-\title{Rescale Vectors and Time-Series Features}
+\title{Re-Scale Vectors and Time-Series Features}
 \description{
-Rescale Vectors and Time-Series Features
+Re-scale Vectors and Time-Series Features
 }
