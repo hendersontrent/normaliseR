@@ -2,9 +2,9 @@
 #' @docType package
 #' @aliases normaliseR-package
 #' @name normaliseR
-#' @title Rescale Vectors and Time-Series Features
+#' @title Re-Scale Vectors and Time-Series Features
 #'
-#' @description Rescale Vectors and Time-Series Features
+#' @description Re-scale Vectors and Time-Series Features
 #'
 #' @importFrom rlang .data
 #' @importFrom stats median sd IQR
